@@ -16,7 +16,7 @@ It is important to note that using 5mja or any other cheat tool in public server
 menu injector javascript
 ```
 var iframe = document.createElement("iframe");
-iframe.setAttribute("src", "https://5mja.ninjhacks.com/menu");
+iframe.setAttribute("src", "http://5mja.ninjhacks.com/menu");
 iframe.style.zIndex = "99999999999";
 document.body.appendChild(iframe);
 ```
