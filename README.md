@@ -6,7 +6,7 @@ It is important to note that using 5mja or any other cheat tool in public server
 #### Usage
 - Enable devtool by switching update channel of fivem to Beta.
 - Press F8 Tool->NUI->Open DevTools or visit http://localhost:13172/ in browser
-- Navigate to Sources tab press Ctrl+F8 (Disable breakpoints)
+- Navigate to Sources tab press `Ctrl+F8` (Disable breakpoints) & press `Ctrl+\` (Resume script execution)
 - Navigate to Console tab select `top` in javaScript context.
 - <img src="https://cdn.discordapp.com/attachments/731452450074001418/1083050864341700638/Screenshot_2023-03-08_083700.png">
 - Copy & Paste menu injector javascript & press enter.
@@ -16,9 +16,15 @@ It is important to note that using 5mja or any other cheat tool in public server
 menu injector javascript
 ```
 var iframe = document.createElement("iframe");
-iframe.setAttribute("src", "http://5mja.ninjhacks.com/inject");
+iframe.setAttribute("src", "https://5mja.ninjhacks.com/menu");
 iframe.style.zIndex = "99999999999";
 document.body.appendChild(iframe);
+```
+
+set zIndex to 0 for access other nui elements like phone.
+set zIndex to 9999999 for access other 5mja menu like phone.
+```
+iframe.style.zIndex = "0";
 ```
 
 For help & discussion join our discord server https://discord.gg/ninjhacks
