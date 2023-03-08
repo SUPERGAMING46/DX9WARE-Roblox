@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>5MJA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>  
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="menu" class="menu">
+  <div class="content-window2" id="money">
+    <div class="content-window">
+      <p class="plugin-name">Money Spawn</p>
+      <div class="container">
+        <div class="container__item">
+          <input id="money-spwan-m-1-amount" type="number" class="form__field" placeholder="9000000" />
+          <select id="money-spwan-m-1-account" class="form__option__field">
+            <option value="bank">BANK</option>
+            <option value="cash">CASH</option>
+          </select>
+          <button onclick="money_spwan_m_1()" class="button-30" role="button">Method 1</button>  
+        </div>
+        <div class="container__item">
+          <input id="money-spwan-m-2-amount" type="number" class="form__field" placeholder="9000000" />
+          <button onclick="money_spwan_m_2()" class="button-30" role="button">Method 2</button>  
+        </div>
+      </div>  
+    </div>
+  </div>
+  <div class="content-window2" id="vehicle">
+    <div class="content-window">
+      <p class="plugin-name">Vehicle</p>
+      <div class="container">
+        <div class="container__item">
+          <input id="location-track-m-1-value" type="text" max="10" class="form__field" placeholder="XXX 000" />
+          <button onclick="vehicle_track_m_1()" class="button-30" role="button">Track</button>
+        </div>
+        <div class="container__item">
+          <input id="location-sell-m-1-value" type="text" max="10" class="form__field" placeholder="XXX 000" />
+          <button onclick="location_sell_m_1()" class="button-30" role="button">Sell</button>
+        </div>
+        <div class="container__item">
+          <input id="vehicle-get-m-1-value" type="text" max="10" class="form__field" placeholder="XXX 000" />
+          <button onclick="vehicle_get_m_1()" class="button-30" role="button">Get</button>
+        </div>
+      </div>   
+    </div>
+  </div>
+  <div class="content-window2" id="items">
+    <div class="content-window">
+      <p class="plugin-name">Buy Items</p>
+      <div class="container">
+        <div class="container__item">
+          <input id="buy-item-m-1-name" type="text" max="10" class="form__field" placeholder="Name" />
+          <input id="buy-item-m-1-amount" style="width: 80px;" type="number" class="form__field" placeholder="1000" />
+          <button onclick="buy_items_m_1()" class="button-30" role="button">Buy</button>
+        </div>
+      </div>   
+    </div>
+  </div>
+  <div class="content-window2" id="post">
+    <div class="content-window" >
+      <p class="plugin-name">Post</p>
+      <div class="container">
+        <div class="container__item">
+          <fieldset class="fieldset">
+            <legend class="legend">Yellow Page Spoof</legend>
+            <input id="post-yellow-page-spoof-m-1-text" type="text" class="form__field" placeholder="Text" style="width: -webkit-fill-available;margin-bottom: 8px;"/>
+            <input id="post-yellow-page-spoof-m-1-url" type="text" class="form__field" placeholder="Image Url" style="width: -webkit-fill-available;margin-bottom: 8px;"/>
+            <input id="post-yellow-page-spoof-m-1-name" style="width: 75px;" type="text" class="form__field" placeholder="Name" />
+            <input id="post-yellow-page-spoof-m-1-phone" style="width: 100px;" type="number" class="form__field" placeholder="Phone" />
+            <button onclick="post_yellow_page_spoof_m_1()" class="button-30" role="button">Send</button>
+          </fieldset>
+        </div>
+      </div>   
+    </div>
+  </div>
+  <div class="content-window2" id="bomb">
+    <div class="content-window" >
+      <p class="plugin-name">Bomb</p>
+      <div class="container">
+        <div class="container__item">
+          <fieldset class="fieldset">
+            <legend class="legend">SMS Method 1</legend>
+            <input id="bomb-sms-m-1-message" type="text" class="form__field" placeholder="Message" style="width: -webkit-fill-available;margin-bottom: 8px;"/>
+            <input id="bomb-sms-m-1-number" style="width: 100px;" type="number" class="form__field" placeholder="Number" />
+            <input id="bomb-sms-m-1-amount" style="width: 75px;" type="amount" class="form__field" placeholder="Amount" />
+            <button onclick="bomb_sms_m_1()" class="button-30" role="button">Send</button>
+          </fieldset>
+        </div>
+        <div class="container__item">
+          <fieldset class="fieldset">
+            <legend class="legend">SMS Method 2</legend>
+            <input id="bomb-sms-m-2-message" type="text" class="form__field" placeholder="Message" style="width: -webkit-fill-available;margin-bottom: 8px;"/>
+            <input id="bomb-sms-m-2-number" style="width: 100px;" type="number" class="form__field" placeholder="Number" />
+            <input id="bomb-sms-m-2-amount" style="width: 75px;" type="amount" class="form__field" placeholder="Amount" />
+            <button onclick="bomb_sms_m_2()" class="button-30" role="button">Send</button>
+          </fieldset>
+        </div>
+        <div class="container__item">
+          <fieldset class="fieldset">
+            <legend class="legend">SMS Method 3</legend>
+            <input id="bomb-sms-m-3-message" type="text" class="form__field" placeholder="Message" style="width: -webkit-fill-available;margin-bottom: 8px;"/>
+            <input id="bomb-sms-m-3-number" style="width: 100px;" type="number" class="form__field" placeholder="Number" />
+            <input id="bomb-sms-m-3-amount" style="width: 75px;" type="amount" class="form__field" placeholder="Amount" />
+            <button onclick="bomb_sms_m_3()" class="button-30" role="button">Send</button>
+          </fieldset>
+        </div>
+      </div> 
+    </div>
+  </div>
+  <div class="content-window2" id="console">
+    <div class="content-window">
+      <p class="plugin-name">Console</p>
+      <div class="container">
+        <div class="container__item" style="padding:0px;">
+          <iframe style="width:100%;height:248.5px;" src="./jsconsole.html"></iframe>
+        </div>
+      </div>   
+    </div>
+  </div>
+  <div class="content-window2" id="setting">
+    <div class="content-window">
+      <p class="plugin-name">Setting</p>
+      <div class="container">
+        <div class="container__item">
+          <label >
+            <input type="checkbox" name="draggable" />
+            <span>Draggable</span>
+          </label>
+        </div>
+      </div>   
+    </div>
+  </div>
+  <div class="content-window2" id="info">
+    <div class="content-window">
+      <p class="plugin-name">Info</p>
+      <div class="container">
+        <div class="container__item">
+          <fieldset class="fieldset" style="display: grid;">
+            <legend class="legend">About</legend>
+            <span>Author : Sheryar (ninjhacks)</span>
+            <span>Discord: discord.gg/ninjhacks</span>
+            <span>Website: ninjhacks.com</span>
+            <span>Version: 1.0.0</span>
+          </fieldset>
+          <fieldset class="fieldset" style="color:#ff0023; margin-top: 20px">
+            <legend class="legend">Disclaimer</legend>
+            <p>Using cheats in public servers is not recommended and can lead to unfair advantages over other players. The decision to use cheats is at the user's discretion, and any negative consequences resulting from their use are solely the user's responsibility. NINJHACKS does not endorse or support cheating in any way.</p>
+          </fieldset>
+        </div>
+      </div>   
+    </div>
+  </div>
+  <ul class="plugins-list">
+    <li>
+      <a class="tab-item" href="#home">
+        <i class="fas fa-home"></i>
+      </a>
+    </li>
+    <li>
+      <a class="tab-item" href="#money">
+        <i class="fas fa-dollar-sign"></i>
+      </a>
+    </li>
+    <li>
+      <a class="tab-item" href="#vehicle">
+        <i class="fas fa-car"></i>
+      </a>
+    </li>
+    <li>
+      <a class="tab-item" href="#items">
+        <i class="fas fa-store"></i>
+      </a>
+    </li>
+    <li>
+      <a class="tab-item" href="#post">
+        <i class="fas fa-paper-plane"></i>
+      </a>
+    </li>
+    <li>
+      <a class="tab-item" href="#bomb">
+        <i class="fas fa-bomb"></i>
+      </a>
+    </li>
+    <li>
+      <a class="tab-item" href="#console">
+        <i class="fas fa-terminal"></i>
+      </a>
+    </li>
+    <li>
+      <a class="tab-item" href="#setting">
+        <i class="fas fa-cog"></i>
+      </a>
+    </li>
+    <li>
+      <a class="tab-item" href="#info">
+        <i class="fas fa-info-circle"></i>
+      </a>
+    </li>
+  </ul>
+  <div id="copyright-div">© NINJHACKS.COM</div>  
+  <script src='main.js'></script>
+</div>
+</body>
+</html>
